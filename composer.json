@@ -1,0 +1,46 @@
+{
+    "name": "emedia/quick-data-laravel",
+    "description": "Gives basic CRUD handling and automatic relationship (nested) saving.",
+    "type": "package",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Shane Perera",
+            "email": "shane@elegantmedia.com.au"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:elegantmedia/laravel-helpers.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:elegantmedia/php-helpers.git"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "illuminate/support": "^6.0|^7.0",
+        "illuminate/http": "^6.0|^7.0",
+        "cviebrock/eloquent-sluggable": "^6.0|^7.0",
+        "emedia/laravel-helpers": "^4.0"
+    },
+    "autoload": {
+        "classmap": [
+            "database"
+        ],
+        "psr-4": {
+            "EMedia\\QuickData\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "EMedia\\QuickData\\DatabaseBlueprintServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
